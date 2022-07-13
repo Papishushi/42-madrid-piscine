@@ -1,12 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    mkrdir                                             :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/07/13 03:26:53 by dmoliner          #+#    #+#              #
+#    Updated: 2022/07/13 03:27:27 by dmoliner         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/bin/bash
 
-GENERIC_NAME=$1
-FIRST=$2
-LAST=$3
-
-for i in $(seq $FIRST $LAST);
+for i in $(seq $2 $3);
 do
 	GENERIC_NAME+=$i;
-	mkdir -p $GENERIC_NAME;
+	mkdir -p $1;
 	GENERIC_NAME=$1;
 done
