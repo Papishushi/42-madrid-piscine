@@ -6,7 +6,7 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:34:17 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/11 22:37:32 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/13 13:10:24 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,10 @@ void	ft_putnbr(int nb)
 	}
 	write(1, result, lenght);
 	write(1, "\n", 3);
+}
+
+int main(void)
+{
+	ft_putnbr(-77464);
+	return (0);
 }

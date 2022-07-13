@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 17:08:25 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 12:58:59 by dmoliner         ###   ########.fr       */
+/*   Created: 2022/07/13 21:25:35 by dmoliner          #+#    #+#             */
+/*   Updated: 2022/07/13 21:28:59 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
 
-void	ft_is_negative( int n )
+int	ft_str_is_printable(char *str)
 {
-	char	result;
+	int		i;
+	char	current_char;
 
-	result = 'N';
-	if (n >= 0)
-		result = 'P';
-	write (1, &result, 1);
+	i = 0;
+	if (str == '\0')
+		return (1);
+	while (*(str + i) != '\0')
+	{
+		current_char = *(str + i);
+		if (current_char < 32 || current_char > 126)
+			return (0);
+		i++;
+	}
+	return (1);
 }
+
+/*
+int	main( void )
+{
+	char	input[] = "ABD	Fe";
+	printf("Is printable:%i", ft_str_is_printable(input));
+	return (0);
+}*/

@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 17:08:25 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 12:58:59 by dmoliner         ###   ########.fr       */
+/*   Created: 2022/07/13 19:18:48 by dmoliner          #+#    #+#             */
+/*   Updated: 2022/07/13 19:46:55 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
 
-void	ft_is_negative( int n )
+char	*ft_strcpy(char *dest, char *src)
 {
-	char	result;
+	int	i;
 
-	result = 'N';
-	if (n >= 0)
-		result = 'P';
-	write (1, &result, 1);
+	i = 0;
+	while (*(src + i) != '\0')
+	{
+		*(dest + i) = *(src + i);
+		i++;
+	}
+	*(dest + i) = '\0';
+	return (dest);
 }
+
+/*
+int	main( void )
+{
+	char	destination[] = "Hfsgg troll!";
+	char	input[] = "Hello World!";
+	ft_strcpy(destination, input);
+	printf("destination:%s", destination);
+	return (0);
+}
+*/

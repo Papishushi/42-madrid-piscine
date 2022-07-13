@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 17:08:25 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 12:58:59 by dmoliner         ###   ########.fr       */
+/*   Created: 2022/07/13 21:41:55 by dmoliner          #+#    #+#             */
+/*   Updated: 2022/07/13 23:18:05 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
 
-void	ft_is_negative( int n )
+char	*ft_strlowcase(char *str)
 {
-	char	result;
+	int		i;
+	char	current_char;
 
-	result = 'N';
-	if (n >= 0)
-		result = 'P';
-	write (1, &result, 1);
+	i = 0;
+	while (*(str + i) != '\0')
+	{
+		current_char = *(str + i);
+		if (current_char >= 'A' && current_char <= 'Z')
+			*(str + i) += 32;
+		i++;
+	}
+	return (str);
 }
+
+/*
+int	main( void )
+{
+	char	input[] = "aBDFe";
+	printf("In lowercase:%s", ft_strlowcase(input));
+	return (0);
+}*/

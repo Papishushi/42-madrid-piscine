@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 17:08:25 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 12:58:59 by dmoliner         ###   ########.fr       */
+/*   Created: 2022/07/13 20:18:06 by dmoliner          #+#    #+#             */
+/*   Updated: 2022/07/13 20:20:30 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
 
-void	ft_is_negative( int n )
+int	ft_str_is_numeric(char *str)
 {
-	char	result;
+	int		i;
+	char	current_char;
 
-	result = 'N';
-	if (n >= 0)
-		result = 'P';
-	write (1, &result, 1);
+	i = 0;
+	if (str == '\0')
+		return (1);
+	while (*(str + i) != '\0')
+	{
+		current_char = *(str + i);
+		if (current_char < '0' || current_char > '9')
+			return (0);
+		i++;
+	}
+	return (1);
 }
+
+/*
+int	main( void )
+{
+	char	input[] = "1234";
+	printf("Is numeric:%i", ft_str_is_numeric(input));
+	return (0);
+}*/
