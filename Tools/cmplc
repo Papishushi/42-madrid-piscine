@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir -p bin
+
+gcc -c -Wall -Werror -Wextra $@
+gcc -o ./bin/program.exe *.o -lm
+
+rm *.o
+
+./bin/program.exe

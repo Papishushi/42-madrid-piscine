@@ -1,0 +1,12 @@
+#!/bin/bash
+
+GENERIC_NAME=$1
+FIRST=$2
+LAST=$3
+
+for i in $(seq $FIRST $LAST);
+do
+	GENERIC_NAME+=$i;
+	mkdir -p $GENERIC_NAME;
+	GENERIC_NAME=$1;
+done
