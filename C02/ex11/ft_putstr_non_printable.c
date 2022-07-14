@@ -3,32 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:38:33 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/14 12:11:14 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/14 20:40:17 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*char_to_hex(char c, char *buffer, unsigned int size)
+void	char_to_hex(unsigned char a, char *buf)
 {
-	int		remainder;
+	char	*data;
+	char	temp;
 	int		i;
+	int		j;
 
+	data = "0123456789abcdef";
+	*buf = '0';
+	*(buf + 1) = '0';
 	i = 0;
-	while (c != 0)
+	while (a)
 	{
-		remainder = c % 16;
-		if (remainder < 10)
-			*(buffer + size - i) = 48 + remainder;
-		else
-			*(buffer + size - i) = 55 + remainder;
-		c = c / 16;
+		buf[i] = data[a % 16];
+		a /= 16;
 		i++;
 	}
-	return (buffer);
+	j = 0;
+	while (j < i)
+	{
+		temp = buf[j];
+		buf[j] = buf[i];
+		buf[i] = temp;
+		i--;
+		j++;
+	}
 }
 
 int	is_printable(char c)
@@ -41,15 +50,17 @@ int	is_printable(char c)
 void	ft_putstr_non_printable(char *str)
 {
 	int		i;
-	char	buffer[4];
+	char	buffer[2];
 
 	i = 0;
 	while (*(str + i) != '\0')
 	{
+		if (*(str + i) < 0)
+			*(str + i) += 128;
 		if (is_printable(*(str + i)) == 0)
 		{
 			write(1, "\\", 1);
-			char_to_hex(*(str + i), buffer, 2);
+			char_to_hex(*(str + i), buffer);
 			write(1, buffer, 2);
 		}
 		else
@@ -58,9 +69,10 @@ void	ft_putstr_non_printable(char *str)
 	}
 }
 
+/*
 int	main( void )
 {
 	char	input[] = "Coucou\ntu vas bien ?";
 	ft_putstr_non_printable(input);
 	return (0);
-}
+}*/

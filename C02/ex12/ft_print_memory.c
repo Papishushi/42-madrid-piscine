@@ -3,31 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 03:07:00 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/14 11:58:32 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/14 18:34:48 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*char_to_hex(char c, char *buffer, unsigned int size)
+void	char_to_hex(unsigned char a, char *buf)
 {
-	int		remainder;
+	char	*data;
+	char	temp;
 	int		i;
+	int		j;
 
-	while (c != 0)
+	data = "0123456789ABCDEF";
+	*buf = '0';
+	*(buf + 1) = '0';
+	i = 0;
+	while (a)
 	{
-		remainder = c % 16;
-		if (remainder < 10)
-			*(buffer + size - i) = 48 + remainder;
-		else
-			*(buffer + size - i) = 55 + remainder;
-		c = c / 16;
+		buf[i] = data[a % 16];
+		a /= 16;
 		i++;
 	}
-	return (buffer);
+	j = 0;
+	while (j < i)
+	{
+		temp = buf[j];
+		buf[j] = buf[i];
+		buf[i] = temp;
+		i--;
+		j++;
+	}
 }
 
 int	is_printable(char c)
@@ -40,12 +50,13 @@ int	is_printable(char c)
 void	print_hex_contents(void *addr, int og_i)
 {
 	int		i;
-	char	buffer[16];
+	char	buffer[2];
 
 	i = 0;
 	while (i < 16)
 	{
-		write(1, char_to_hex(*((char	*)(addr + og_i + i)), buffer, 4), 4);
+		char_to_hex(*((char *)(addr + og_i + i)), buffer);
+		write(1, buffer, 2);
 		write(1, " ", 1);
 		i++;
 	}
@@ -58,7 +69,7 @@ void	print_contents(void *addr, int og_i)
 	i = 0;
 	while (i < 16)
 	{
-		if (is_printable(*((char	*)(addr + og_i + i))))
+		if (is_printable(*((char *)(addr + og_i + i))))
 			write(1, addr + og_i + i, 1);
 		else
 			write(1, ".", 1);

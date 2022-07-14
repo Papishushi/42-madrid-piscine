@@ -6,7 +6,7 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 15:49:52 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/12 15:02:26 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/14 19:20:35 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,18 @@ void	ft_print_combn(int n)
 {
 	if (n > 0 && n < 10)
 	{
-		comb_loop(n, 0, 0);
+		int	values[2];
+
+		values[0] = 0;
+		while (values[0] <= 98)
+		{
+			values[1] = values[0] + 1;
+			while (values[1] <= 99)
+			{
+				display_result(values);
+				values[1]++;
+			}
+			values[0]++;
+		}
 	}
 }
