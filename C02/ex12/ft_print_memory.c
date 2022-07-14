@@ -6,7 +6,7 @@
 /*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 03:07:00 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/14 03:35:41 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/14 11:37:23 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,33 +37,48 @@ int	is_printable(char c)
 	return (1);
 }
 
-void	*ft_print_memory(void *addr, unsigned int size)
+void	print_hex_contents(void *addr, int og_i)
 {
-	int		indexes[3];
+	int		i;
 	char	buffer[4];
 
-	indexes[0] = 0;
-	while (indexes[0] < size)
+	i = 0;
+	while (i < 16)
 	{
-		write(1, (addr + indexes[0]), 16);
+		write(1, char_to_hex(*(addr + og_i + i), buffer, 4), 4);
+		write(1, ' ', 1);
+		i++;
+	}
+}
+
+void	print_contents(void *addr, int og_i)
+{
+	int		i;
+	char	buffer[4];
+
+	i = 0;
+	while (i < 16)
+	{
+		if (is_printable(*(addr + og_i + i)))
+			write(1, *(addr + og_i + i), 1);
+		else
+			write(1, '.', 1);
+		i++;
+	}
+}
+
+void	*ft_print_memory(void *addr, unsigned int size)
+{
+	int		i;
+
+	i = 0;
+	while (i < size)
+	{
+		write(1, (addr + i), 16);
 		write(1, ': ', 2);
-		indexes[1] = 0;
-		while (indexes[1] < 16)
-		{
-			write(1, char_to_hex(*(addr + indexes[0] + indexes[1]), buffer, 4), 4);
-			write(1, ' ', 1);
-			indexes[1]++;
-		}
-		indexes[2] = 0;
-		while (indexes[2] < 16)
-		{
-			if (is_printable(*(addr + indexes[0] + indexes[2])))
-				write(1, *(addr + indexes[0] + indexes[2]), 1);
-			else
-				write(1, '.', 1);
-			indexes[2]++;
-		}
-		indexes[0] += 16;
+		print_hex_contents(addr, i);
+		print_contents(addr, i);
+		i += 16;
 	}
 	return (addr);
 }
