@@ -1,0 +1,2 @@
+Create a file named "testShell00" using 'touch' or 'cat' commands. Then change the permissions using 'chmod' so it looks like this "-r--r-xr-x" when you use 'ls -l'.
+Last but not least compress the file into a tar using 'tar -cf testShell00.tar testShell00'.
