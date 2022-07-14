@@ -6,7 +6,7 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 18:06:28 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/14 20:07:35 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/14 20:43:09 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void	ft_print_comb2( void )
 	}
 }
 
-
+/*
 int	main( void )
 {
 	ft_print_comb2();
 	return (0);
-}
+}*/

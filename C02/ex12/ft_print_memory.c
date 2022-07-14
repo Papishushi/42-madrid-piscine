@@ -6,7 +6,7 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 03:07:00 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/14 18:34:48 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/14 20:46:55 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,10 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	return (addr);
 }
 
+/*
 int	main( void )
 {
 	char	input[39] = "Hello	world! My name is Daniel	lol		lol";
 	ft_print_memory(input, 39);
 	return (0);
-}
+}*/

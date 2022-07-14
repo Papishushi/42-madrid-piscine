@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:34:17 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/14 02:19:34 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/14 20:44:23 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,9 @@ void	ft_putnbr(int nb)
 	write(1, "\n", 3);
 }
 
+/*
 int	main(void)
 {
 	ft_putnbr(-77464);
 	return (0);
-}
+}*/
