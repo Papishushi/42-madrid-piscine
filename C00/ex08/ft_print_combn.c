@@ -11,44 +11,44 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	display_result(int *values, int n)
 {
+	int		i;
 	char	result[10];
 
-	result[0] = values[0] + '0';
-	result[1] = values[1] + '0';
-	result[2] = values[2] + '0';
-	result[3] = values[3] + '0';
-	result[4] = values[4] + '0';
-	result[5] = values[5] + '0';
-	result[6] = values[6] + '0';
-	result[7] = values[7] + '0';
-	result[8] = values[8] + '0';
-	result[9] = values[9] + '0';
+	i = 0;
+	while (i < 10)
+	{
+		if (values[i] == 10 && i < n)
+			return ;
+		result[i] = values[i] + '0';
+		i++;
+	}
 	write(1, result, n);
 	write(1, ", ", 2);
 }
 
-void	comb_loop(int i, int n, int *values)
+void	comb_loop(int depth, int n, int *values)
 {
-	printf("value %i %i\n",i, values[i]);
-	values[i] = values[i - 1] + 1;
-	while (values[i] <= 9)
+	values[depth] = values[depth - 1] + 1;
+	if (n == 1)
 	{
-		if(i < n)
-		{
-			comb_loop(i + 1, n, values);
-		}
-		else
+		while (values[depth - 1] <= 9)
 		{
 			display_result(values, n);
-			values[i]++;
+			values[depth - 1]++;
 		}
-		//values[i]++;
 	}
-	values[i - 1]++;
+	if (depth < n)
+	{
+		comb_loop(depth + 1, n, values);
+		while (values[depth] <= 9)
+		{
+			display_result(values, n);
+			values[depth]++;
+		}
+	}
 }
 
 void	ft_print_combn(int n)
@@ -60,15 +60,15 @@ void	ft_print_combn(int n)
 		values[0] = 0;
 		while (values[0] <= 9)
 		{
-
 			comb_loop(1, n, values);
+			values[0]++;
 		}
 	}
 }
 
+/*
 int	main( void )
 {
-	ft_print_combn(9);
+	ft_print_combn(4);
 	return (0);
-}
-
+}*/
