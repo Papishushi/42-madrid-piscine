@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 16:43:51 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/11 22:36:59 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/19 01:50:59 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ void	ft_print_alphabet( void )
 	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
 }
 
-/*
-int	main( void )
+/*int	main( void )
 {
 	ft_print_alphabet();
 	return (0);

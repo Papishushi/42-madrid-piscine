@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 17:10:19 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/18 13:38:40 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/19 01:52:06 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_print_comb( void )
 	int		values[3];
 	char	result[3];
 
+	values[0] = 0;
 	while (values[0] <= 7)
 	{
 		values[1] = values[0] + 1;

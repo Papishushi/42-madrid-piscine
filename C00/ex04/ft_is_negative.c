@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 17:08:25 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/18 13:38:28 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/19 01:51:12 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ void	ft_is_negative( int n )
 	write (1, &result, 1);
 }
 
-/*
-int	main( void )
+/*int	main( void )
 {
 	ft_is_negative(0);
 	write(1, "\n", 1);
