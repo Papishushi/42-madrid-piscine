@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/18 21:31:22 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/18 22:34:29 by dmoliner         ###   ########.fr       */
+/*   Created: 2022/07/18 22:36:39 by dmoliner          #+#    #+#             */
+/*   Updated: 2022/07/18 22:46:06 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	cmp1;
-	int	cmp2;
-	int	i;
+	unsigned int	i;
+	unsigned int	j;
 
-	cmp1 = 0;
-	cmp2 = 0;
 	i = 0;
-	while (s1[i] != '\0' && i < n)
-		cmp1 += s1[i++];
-	i = 0;
-	while (s2[i] != '\0' && i < n)
-		cmp2 += s2[i++];
-	return (cmp1 - cmp2);
+	j = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (j < nb && src[j] != '\0')
+		dest[i++] = src[j++];
+	dest[i] = '\0';
+	return (dest);
 }
 
 /*#include <stdio.h>
 int	main( void )
 {
-	printf("%i",ft_strncmp("Hak", "Hika", 3));
+	char	dest[8] = "Hak";
+	printf("%s",ft_strncat(dest, "Hika", 2));
 	return (0);
 }*/
