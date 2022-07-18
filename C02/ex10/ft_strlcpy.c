@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:17:41 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/14 02:37:35 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/18 18:19:05 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	{
 		if (i < size)
 		{
-			current_char = *(str + i);
+			current_char = *(src + i);
 			*(dest + i) = *(src + i);
 			i++;
 		}
