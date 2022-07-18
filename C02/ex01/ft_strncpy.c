@@ -6,7 +6,7 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:24:57 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 19:50:27 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:20:58 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,11 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	return (dest + n);
 }
 
-/*
-int	main( void )
+/*int	main( void )
 {
 	char	destination[] = "Hfsgg troll!";
 	char	input[] = "Hello Wor";
 	ft_strncpy(destination, input, 10);
 	printf("destination:%s", destination);
 	return (0);
-}
-*/
+}*/

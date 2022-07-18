@@ -6,7 +6,7 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 15:49:52 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/14 22:49:48 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:21:48 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	display_result(int *values, int n)
 
 void	comb_loop(int depth, int n, int *values)
 {
-	values[depth] = values[depth - 1] + 1;
 	if (n == 1)
 	{
 		while (values[depth - 1] <= 9)
@@ -42,6 +41,7 @@ void	comb_loop(int depth, int n, int *values)
 	}
 	if (depth < n)
 	{
+		values[depth] = values[depth - 1] + 1;
 		comb_loop(depth + 1, n, values);
 		while (values[depth] <= 9)
 		{
@@ -66,9 +66,8 @@ void	ft_print_combn(int n)
 	}
 }
 
-/*
 int	main( void )
 {
-	ft_print_combn(4);
+	ft_print_combn(3);
 	return (0);
-}*/
+}

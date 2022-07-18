@@ -6,7 +6,7 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:18:48 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 19:46:55 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:21:20 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,11 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-/*
-int	main( void )
+/*int	main( void )
 {
 	char	destination[] = "Hfsgg troll!";
 	char	input[] = "Hello World!";
 	ft_strcpy(destination, input);
 	printf("destination:%s", destination);
 	return (0);
-}
-*/
+}*/

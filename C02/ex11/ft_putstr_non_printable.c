@@ -6,39 +6,11 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:38:33 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/14 20:40:17 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:14:13 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	char_to_hex(unsigned char a, char *buf)
-{
-	char	*data;
-	char	temp;
-	int		i;
-	int		j;
-
-	data = "0123456789abcdef";
-	*buf = '0';
-	*(buf + 1) = '0';
-	i = 0;
-	while (a)
-	{
-		buf[i] = data[a % 16];
-		a /= 16;
-		i++;
-	}
-	j = 0;
-	while (j < i)
-	{
-		temp = buf[j];
-		buf[j] = buf[i];
-		buf[i] = temp;
-		i--;
-		j++;
-	}
-}
 
 int	is_printable(char c)
 {
@@ -57,10 +29,11 @@ void	ft_putstr_non_printable(char *str)
 	{
 		if (*(str + i) < 0)
 			*(str + i) += 128;
-		if (is_printable(*(str + i)) == 0)
+		if (!is_printable(*(str + i)))
 		{
 			write(1, "\\", 1);
-			char_to_hex(*(str + i), buffer);
+			buffer[0] = "0123456789abcdef"[*(str + i) / 16];
+			buffer[1] = "0123456789abcdef"[*(str + i) % 16];
 			write(1, buffer, 2);
 		}
 		else
@@ -68,11 +41,10 @@ void	ft_putstr_non_printable(char *str)
 		i++;
 	}
 }
-
 /*
 int	main( void )
 {
-	char	input[] = "Coucou\ntu vas bien ?";
+	char	input[] = "Coucou\ntu vas	bien ?";
 	ft_putstr_non_printable(input);
 	return (0);
 }*/

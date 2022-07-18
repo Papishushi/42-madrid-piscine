@@ -6,7 +6,7 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 03:07:00 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/14 20:46:55 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:07:25 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	char_to_hex(unsigned char a, char *buf)
 	int		i;
 	int		j;
 
-	data = "0123456789ABCDEF";
+	data = "0123456789abcdef";
 	*buf = '0';
 	*(buf + 1) = '0';
 	i = 0;

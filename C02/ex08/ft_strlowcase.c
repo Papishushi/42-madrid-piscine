@@ -6,7 +6,7 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:41:55 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 23:18:05 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:20:21 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strlowcase(char *str)
 /*
 int	main( void )
 {
-	char	input[] = "aBDFe";
+	char	input[] = "aBDFe1562AAb>Z";
 	printf("In lowercase:%s", ft_strlowcase(input));
 	return (0);
 }*/
