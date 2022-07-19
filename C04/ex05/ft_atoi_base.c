@@ -6,7 +6,7 @@
 /*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 04:45:50 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/19 18:46:53 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/19 19:01:50 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	pw(int nmbr, int p)
 	int	result;
 
 	i = 1;
-	if(p == 0)
+	if (p == 0)
 		return (1);
 	result = nmbr;
 	while (i++ < p)
@@ -89,7 +89,6 @@ int	get_counts(char *str, int *ngtv_count, int *nmbr_count)
 	return (nmbr_i);
 }
 
-#include <stdio.h>
 int	ft_atoi_base(char *str, char *base)
 {
 	int	lbase;
@@ -111,8 +110,6 @@ int	ft_atoi_base(char *str, char *base)
 		{
 			nb_c--;
 			result += get_i(str[nb_strt - nb_c], base) * pw(lbase, nb_c);
-			//printf("c: %c ", str[nb_strt - nb_c]);
-			//printf("r: %i\n", result);
 		}
 	}
 	if (ng_c % 2 != 0)
@@ -120,10 +117,11 @@ int	ft_atoi_base(char *str, char *base)
 	return (result);
 }
 
+/*#include <stdio.h>
 int	main( void )
 {
 	printf("Bin (1011 == 11): %i\n", ft_atoi_base("  --+--1011shjghd0101", "01"));
 	printf("Hex (7E == 126): %i\n", ft_atoi_base("  --+--7Eab0101", "0123456789ABCDEF"));
 	printf("Oct (124 == 84): %i\n", ft_atoi_base("  --+--124ab0101", "01234567"));
 	return (0);
-}
+}*/

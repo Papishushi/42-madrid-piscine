@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/19 18:56:52 by dmoliner          #+#    #+#             */
+/*   Updated: 2022/07/19 18:56:54 by dmoliner         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	initialize(char *buff)
@@ -7,7 +19,7 @@ void	initialize(char *buff)
 	i = 0;
 	while (i < 11)
 	{
-		buff[i] = '0';
+		buff[i] = '\0';
 		i++;
 	}
 }
@@ -32,10 +44,10 @@ int	ft_putnbr_sp(int *nb)
 
 void	ft_putnbr(int nb)
 {
-	char			buffer[11];
-	char			reverse_buffer[11];
-	int				lenght;
-	int				i;
+	char	buffer[11];
+	char	reverse_buffer[11];
+	int		lenght;
+	int		i;
 
 	i = -1;
 	lenght = 0;

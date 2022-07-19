@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 22:00:17 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/18 18:22:08 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/19 18:58:57 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-int	main( void )
+/*int	main( void )
 {
 	char	input[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
 	printf("Capitalized: %s", ft_strcapitalize(input));
 	return (0);
-}
+}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:24:57 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/18 18:17:36 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/19 18:58:00 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	if (i < n)
 		while (dest[i] != '\0')
 			*(dest + i++) = '\0';
-	return dest;
+	return (dest);
 }
 
-int	main( void )
+/*int	main( void )
 {
 	char	destination[] = "Hfsgg troll!";
 	char	input[] = "Hello Wor";
 	ft_strncpy(destination, input, 10);
 	printf("destination:%s", destination);
 	return (0);
-}
+}*/

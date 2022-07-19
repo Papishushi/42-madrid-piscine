@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 15:56:34 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/18 13:37:29 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/19 03:01:46 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ void	ft_putchar(	char c )
 	write(1, &c, 1);
 }
 
-/*
-int	main( void )
+/*int	main( void )
 {
 	ft_putchar('z');
 	return (0);
