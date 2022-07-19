@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:56:03 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/18 22:45:45 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/19 21:33:10 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//OK
 
 char	*ft_strcat(char *dest, char *src)
 {
