@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:38:33 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/20 02:09:56 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:11:23 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

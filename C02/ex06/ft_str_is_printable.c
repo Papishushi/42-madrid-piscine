@@ -6,11 +6,9 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:25:35 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 21:28:59 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:22:38 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 int	ft_str_is_printable(char *str)
 {
@@ -30,7 +28,7 @@ int	ft_str_is_printable(char *str)
 	return (1);
 }
 
-/*
+/*#include <stdio.h>
 int	main( void )
 {
 	char	input[] = "ABD	Fe";

@@ -6,11 +6,9 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:41:55 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/18 14:20:21 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:22:57 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 char	*ft_strlowcase(char *str)
 {
@@ -28,7 +26,7 @@ char	*ft_strlowcase(char *str)
 	return (str);
 }
 
-/*
+/*#include <stdio.h>
 int	main( void )
 {
 	char	input[] = "aBDFe1562AAb>Z";

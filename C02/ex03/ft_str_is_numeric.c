@@ -6,11 +6,9 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 20:18:06 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 20:20:30 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:22:12 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 int	ft_str_is_numeric(char *str)
 {
@@ -30,7 +28,7 @@ int	ft_str_is_numeric(char *str)
 	return (1);
 }
 
-/*
+/*#include <stdio.h>
 int	main( void )
 {
 	char	input[] = "1234";

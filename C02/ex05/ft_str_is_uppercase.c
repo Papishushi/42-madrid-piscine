@@ -6,11 +6,9 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:22:51 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 21:24:56 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:22:30 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 int	ft_str_is_uppercase(char *str)
 {
@@ -30,7 +28,7 @@ int	ft_str_is_uppercase(char *str)
 	return (1);
 }
 
-/*
+/*#include <stdio.h>
 int	main( void )
 {
 	char	input[] = "ABDFe";

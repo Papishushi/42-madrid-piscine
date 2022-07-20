@@ -6,11 +6,9 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:29:25 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/13 23:17:59 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:22:47 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 char	*ft_strupcase(char *str)
 {
@@ -28,7 +26,7 @@ char	*ft_strupcase(char *str)
 	return (str);
 }
 
-/*
+/*#include <stdio.h>
 int	main( void )
 {
 	char	input[] = "ABD	Fe";

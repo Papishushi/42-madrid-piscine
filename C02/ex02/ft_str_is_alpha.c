@@ -6,11 +6,11 @@
 /*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:50:54 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/18 14:20:46 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:21:57 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+
 
 int	ft_str_is_alpha(char *str)
 {
@@ -32,7 +32,8 @@ int	ft_str_is_alpha(char *str)
 	return (1);
 }
 
-/*int	main( void )
+/*#include <stdio.h>
+int	main( void )
 {
 	char	input[] = "Hello Wor";
 	printf("Is alpha:%i", ft_str_is_alpha(input));

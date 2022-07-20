@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:24:57 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/20 01:55:52 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:21:48 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //KO | Corrected
-#include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -29,11 +28,15 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 
-/*int	main( void )
+/*#include <string.h>
+#include <stdio.h>
+int	main( void )
 {
 	char	destination[] = "Hfsgg troll!";
 	char	input[] = "Hello Wor";
-	ft_strncpy(destination, input, 10);
-	printf("destination:%s", destination);
+	printf("destination:%s\n", ft_strncpy(destination, input, 1));
+	char	destination2[] = "Hfsgg troll!";
+	char	input2[] = "Hello Wor";
+	printf("destination:%s\n", strncpy(destination2, input2, 1));
 	return (0);
 }*/
