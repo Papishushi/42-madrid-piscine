@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 02:47:04 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/19 22:15:32 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 01:39:51 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ void	ft_putnbr_base(int nbr, char *base)
 /*#include <stdio.h>
 int	main( void )
 {
+	ft_putnbr_base(2147483647, "");
+	ft_putnbr_base(-1266343, "a");
 	ft_putnbr_base(201562, "01");
 	printf("\n");
 	ft_putnbr_base(2147483647, "0123456789ABCDEF");
@@ -70,6 +72,8 @@ int	main( void )
 	ft_putnbr_base(-1266343, "poneyvif");
 	printf("\n");
 	ft_putnbr_base(676437, "42madpisc1ne");
+	printf("\n");
+	ft_putnbr_base(42, "42mad");
 	printf("\n");
 	ft_putnbr_base(0, "ex04");
 	printf("\n");

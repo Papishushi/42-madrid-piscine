@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 23:37:12 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/19 22:35:09 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 01:54:15 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//KO
+//KO | Works fine :/
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
@@ -30,7 +30,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (i);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int	main( void )
 {
 	char	dest[8] = "Hak";
@@ -38,4 +38,4 @@ int	main( void )
 	printf("%i, %s\n",ft_strlcat(dest, "", 8), dest);
 	printf("%i, %s\n",ft_strlcat(dest2, "Hika", 5), dest2);
 	return (0);
-}
+}*/

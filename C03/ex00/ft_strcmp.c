@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:12:35 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/19 21:42:54 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 01:43:05 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//KO//Corrected
+//KO | Corrected
 
 int	ft_strcmp(char *s1, char *s2)
 {

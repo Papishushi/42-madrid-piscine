@@ -6,10 +6,11 @@
 /*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:24:57 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/19 18:58:00 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 01:55:52 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//KO | Corrected
 #include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)

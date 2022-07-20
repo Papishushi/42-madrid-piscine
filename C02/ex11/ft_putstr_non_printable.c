@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:38:33 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/18 14:14:13 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 02:09:56 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ void	ft_putstr_non_printable(char *str)
 	char	buffer[2];
 
 	i = 0;
-	while (*(str + i) != '\0')
+	while (str[i] != '\0')
 	{
-		if (*(str + i) < 0)
-			*(str + i) += 128;
-		if (!is_printable(*(str + i)))
+		if (str[i] < 0)
+			str[i] += 128;
+		if (!is_printable(str[i]))
 		{
 			write(1, "\\", 1);
-			buffer[0] = "0123456789abcdef"[*(str + i) / 16];
-			buffer[1] = "0123456789abcdef"[*(str + i) % 16];
+			buffer[0] = "0123456789abcdef"[str[i] / 16];
+			buffer[1] = "0123456789abcdef"[str[i] % 16];
 			write(1, buffer, 2);
 		}
 		else
@@ -41,10 +41,12 @@ void	ft_putstr_non_printable(char *str)
 		i++;
 	}
 }
-/*
-int	main( void )
+
+/*int	main( void )
 {
-	char	input[] = "Coucou\ntu vas	bien ?";
+	char	input[] = "Coucou\ntu vas	bien\v?";
 	ft_putstr_non_printable(input);
+	char	input2[] = "";
+	ft_putstr_non_printable(input2);
 	return (0);
 }*/

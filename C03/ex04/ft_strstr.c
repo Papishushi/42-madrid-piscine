@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmoliner <dmoliner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:46:55 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/19 22:22:28 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 01:44:46 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//KO
+//KO | Corrected
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -21,7 +21,7 @@ char	*ft_strstr(char *str, char *to_find)
 	i = 0;
 	j = 0;
 	lenght = 0;
-	if(*to_find == 0)
+	if (*to_find == 0)
 		return (str);
 	while (to_find[lenght] != '\0')
 		lenght++;

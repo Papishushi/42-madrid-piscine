@@ -6,7 +6,7 @@
 /*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 22:00:17 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/19 18:58:57 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 01:54:47 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strcapitalize(char *str)
 		current_char = *(str + i);
 		last_char = *(str + i - 1);
 		if (current_char >= 'a' && current_char <= 'z')
-			if (ft_char_is_alpha_numeric(last_char) == 0 || i == 0)
+			if (!ft_char_is_alpha_numeric(last_char) || i == 0)
 				*(str + i) -= 32;
 		i++;
 	}

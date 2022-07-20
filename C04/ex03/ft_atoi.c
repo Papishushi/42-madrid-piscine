@@ -6,7 +6,7 @@
 /*   By: dmoliner < dmoliner@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 01:58:47 by dmoliner          #+#    #+#             */
-/*   Updated: 2022/07/19 02:59:18 by dmoliner         ###   ########.fr       */
+/*   Updated: 2022/07/20 01:40:02 by dmoliner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	get_counts(char *str, int *ngtv_count, int *nmbr_count)
 				if (str[i] != ' ' && str[i] != '\f' && str[i] != '\n')
 					if (str[i] != '\r' && str[i] != '\t' && str[i] != '\v')
 						return ;
-		if (str[i] == '-')
+		if (str[i] == '-' && *nmbr_count == 0)
 			(*ngtv_count)++;
 		i++;
 	}
@@ -74,7 +74,8 @@ int	ft_atoi(char *str)
 /*#include <stdio.h>
 int	main( void )
 {
-	printf("%i\n", ft_atoi("  --+-2147483647adb36"));
+	printf("%i\n", ft_atoi(""));
+	printf("%i\n", ft_atoi("  --+-2147483647+-adb36"));
 	printf("%i\n", ft_atoi("  --+-+0adb36"));
 	printf("%i\n", ft_atoi("  --+-adb36"));
 	printf("%i\n", ft_atoi("      --+126365361bdhdvgb36"));
