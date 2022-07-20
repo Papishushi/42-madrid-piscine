@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 #!/bin/bash
+
 # rm all files
 git rm -r --cached .
 # add all files as per new .gitignore
